@@ -1,50 +1,30 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * check_cycle - check for the loop in a linked list
+ * @list: data type listint_t pointer of list
+ * Return: 0 if no cycle || 1 if there is cycle
  */
-int main(void)
+int check_cycle(listint_t *list)
 {
-	listint_t *head;
-	listint_t *current;
-	listint_t *temp;
-	int i;
+	listint_t *first_loop;
+	listint_t *second_loop;
 
-	head = NULL;
-	add_nodeint(&head, 0);
-	add_nodeint(&head, 1);
-	add_nodeint(&head, 2);
-	add_nodeint(&head, 3);
-	add_nodeint(&head, 4);
-	add_nodeint(&head, 98);
-	add_nodeint(&head, 402);
-	add_nodeint(&head, 1024);
-	print_listint(head);
+	if (list == NULL || list->next == NULL)
+		return  (0);
 
-	if (check_cycle(head) == 0)
-		printf("Linked list has no cycle\n");
-	else if (check_cycle(head) == 1)
-		printf("Linked list has a cycle\n");
+	first_loop = list->next;
+	second_loop = list->next->next;
 
-	current = head;
-	for (i = 0; i < 4; i++)
-		current = current->next;
-	temp = current->next;
-	current->next = head;
-
-	if (check_cycle(head) == 0)
-		printf("Linked list has no cycle\n");
-	else if (check_cycle(head) == 1)
-		printf("Linked list has a cycle\n");
-
-	current = head;
-	for (i = 0; i < 4; i++)
-		current = current->next;
-	current->next = temp;
-
-	free_listint(head);
-
+	while (first_loop && second_loop && second_loop->next)
+	{
+		if (first_loop == second_loop->next)
+		{
+			return (1);
+		}
+		first_loop = first_loop->next;
+		second_loop = second_loop->next->next;
+	}
 	return (0);
 }
