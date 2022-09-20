@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def islower(character):
-    if character > chr(96) and character< chr(123):
+    if ord(character) > 96 and ord(character) < 123:
         return True
