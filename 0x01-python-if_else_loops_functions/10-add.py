@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # add - adds two values
 # a: argument 1 
 # b: argument 2
