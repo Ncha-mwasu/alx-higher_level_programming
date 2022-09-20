@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+# fizzbuzz - prints fizzbuzz
+
+def fizzbuzz():
+    for fizzbuzz in range(1, 101):
+
+        if fizzbuzz % 15 == 0:
+            print("FizzBuzz", end =" ")
+            continue
+
+        elif fizzbuzz % 3 == 0:
+            print("Fizz", end =" ")
+            continue
+
+        elif fizzbuzz % 5 == 0:
+            print("Buzz", end =" ")
+            continue
+        else:
+            print(fizzbuzz, end =" ")
