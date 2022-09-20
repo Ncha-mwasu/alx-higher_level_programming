@@ -1,4 +1,4 @@
-#!!/usr/bin/python3
+#!/usr/bin/python3
 # print_last_digit - prints the last digit of ints
 # number: parameter description
 # Return: last digit
