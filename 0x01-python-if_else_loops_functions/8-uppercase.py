@@ -5,7 +5,10 @@
 
 def uppercase(str):
     for i in str:
-        if ord(i) > 96 and ord(i) < 123:
-            i = chr(ord(i) - 32)
-        print("{:s}".format(i), end="")
+        ascii_val = ord(i)
+        if ascii_val > 96 and ascii_val < 123:
+            ascii_char = chr(ascii_val - 32)
+        else:
+            ascii_char = chr(ascii_val)
+        print("{:s}".format(ascii_char), end="")
     print()
