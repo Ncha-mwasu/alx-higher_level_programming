@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 for letters in range(122, 96, -1):
-    if letters % 2 == 0:
-        print("{}".format(chr(letters)), end="")
+    if letters % 2 != 0:
+        char = (letters - 32)
     else:
-        print("{}".format(chr(letters - 32)), end="")
+        char = letters
+    print("{}".format(chr(char)), end="")
