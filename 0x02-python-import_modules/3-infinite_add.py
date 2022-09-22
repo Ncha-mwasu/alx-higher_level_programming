@@ -5,5 +5,5 @@ if __name__ == "__main__":
     Sum = 0
 
     for args in range(1, arg_len):
-        Sum += int(argv[args])   
+        Sum += int(argv[args])
     print("{}".format(Sum))
