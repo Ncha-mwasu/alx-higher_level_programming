@@ -7,5 +7,4 @@ if __name__ == "__main__":
     for items in range(0, list_len):
         num = builtins[items]
         if num[:2] != '__':
-            num = builtins[items]
             print(num)
