@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
+    tuple_len1 = len(tuple_a)
+    tuple_len2 = len(tuple_b)
+
     if tuple_len1 == 0:
         a1 = 0
         b1 = 0
