@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
-    list_len = len(my_list)
+    list_len = len(my_list) - 1
     if idx < 0:
         list_copy = my_list
         return list_copy
