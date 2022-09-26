@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-def print_matrix_integer(matrix=[[]]):
-    for lists in matrix:
-        for rows in lists:
-            if rows == lists[(len(lists) -1)]:
-                print(rows)
-            else:
-                print(rows, end=" ")
+def no_c(my_string):
+    new_string = my_string.translate({ord('c'): None})
+    new_string = new_string.translate({ord('C'): None})
+    return new_string
