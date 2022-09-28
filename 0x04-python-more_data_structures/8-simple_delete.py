@@ -1,0 +1,6 @@
+def simple_delete(a_dictionary, key=""):
+    if key in a_dictionary:
+        a_dictionary.pop(key)
+    else:
+        a_dictionary
+    return a_dictionary
