@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 class Square:
-    """Class Square that defines a square.
+    """Class square a blueprint (definition) for a square object
     """
     pass
