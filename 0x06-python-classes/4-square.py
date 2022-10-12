@@ -13,19 +13,15 @@ class Square:
         """
         if not isinstance(size, int):
             raise Exception("size must be an integer")
-
         elif size < 0:
             raise Exception("size must be >= 0")
-
         else:
             self.__size = size
 
     def area(self):
         """Class methods to calculate the area of square
-
         Returns:
             area of size
-
         """
         return (self.__size ** 2)
 
@@ -37,12 +33,9 @@ class Square:
     @size.setter
     def size(self, value):
         """method to set the size of the square"""
-
         if not isinstance(value, int):
             raise Exception("size must be an integer")
-
         elif value < 0:
             raise Exception("size must be >= 0")
-
         else:
             self.__value = value
