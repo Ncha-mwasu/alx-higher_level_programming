@@ -8,7 +8,7 @@ class Square:
     def __init__(self, size=0):
         """method that stores the size of the square
         Args:
-            param1 (int): the size of the square
+            size (int): the size of the square
         """
         self.__size = size
 
@@ -24,12 +24,10 @@ class Square:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__value = value
+        self.__value = value
 
     def area(self):
         """Class methods to calculate the area of square
-        Returns:
-            area of size
+        Return area of size
         """
         return (self.__size ** 2)
