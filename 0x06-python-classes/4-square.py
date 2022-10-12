@@ -10,14 +10,7 @@ class Square:
         Args:
             param1 (int): the size of the square
         """
-            self.__size = size
-
-    def area(self):
-        """Class methods to calculate the area of square
-        Returns:
-            area of size
-        """
-        return (self.__size ** 2)
+        self.__size = size
 
     @property
     def size(self):
@@ -33,3 +26,10 @@ class Square:
             raise Exception("size must be >= 0")
         else:
             self.__value = value
+
+    def area(self):
+        """Class methods to calculate the area of square
+        Returns:
+            area of size
+        """
+        return (self.__size ** 2)
