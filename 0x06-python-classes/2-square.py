@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defining a class square"""
 
+
 class Square:
     """Class square a blueprint for a square object
     """
@@ -12,7 +13,7 @@ class Square:
 
         if not isinstance(size, int):
             raise Exception("size must be an integer")
-        
+
         elif size < 0:
             raise Exception("size must be >= 0")
 
