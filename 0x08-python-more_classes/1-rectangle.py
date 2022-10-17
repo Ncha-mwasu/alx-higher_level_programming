@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""A rectangle class (blueprint).
+"""
+A rectangle class (blueprint).
 """
 
 
@@ -28,8 +29,12 @@ class Rectangle:
         """
         Method to set the width of the rectangle
 
-        Args:
-            value (int): a set width value
+         Args:
+            value (int): a set height value.
+
+        Returns:
+            The width value of the rectangle
+
         """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
@@ -42,9 +47,6 @@ class Rectangle:
     def height(self):
         """
         Method to get the height of the rectangle.
-
-        Args:
-            value (int): a set height value.
         """
         return self.__height
 
@@ -52,10 +54,17 @@ class Rectangle:
     def height(self, value):
         """
         Method to set the height of the rectangle
+
+        Args:
+            value (int): a set height value.
+
+        Returns:
+            The height value of the rectangle
+
         """
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         elif value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
         else:
             self.__height = value
