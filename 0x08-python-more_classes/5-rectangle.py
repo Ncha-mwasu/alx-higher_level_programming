@@ -95,3 +95,15 @@ class Rectangle:
                 if self.length != self.__height - 1:
                     rect.append("\n")
             return("".join(rect))
+
+    def __repr__(self):
+        """
+        A module to recreate the rectangle.
+
+        Returns:
+            string representation of the rectangle
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        print("Bye rectangle...")
