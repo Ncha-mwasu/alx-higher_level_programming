@@ -7,6 +7,7 @@ class Rectangle:
     """
     A class (blueprint) to create a rectangle.
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initialize a new rectangle.
@@ -16,6 +17,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -95,3 +97,16 @@ class Rectangle:
                 if self.length != self.__height - 1:
                     rect.append("\n")
             return("".join(rect))
+
+    def __repr__(self):
+        """
+        A module to recreate the rectangle.
+
+        Returns:
+            string representation of the rectangle
+        """
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
