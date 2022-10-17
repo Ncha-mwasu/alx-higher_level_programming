@@ -30,7 +30,7 @@ class Rectangle:
         Method to set the width of the rectangle
 
          Args:
-            value (int): a set height value.
+            value (int): a set width value.
 
         Returns:
             The width value of the rectangle
