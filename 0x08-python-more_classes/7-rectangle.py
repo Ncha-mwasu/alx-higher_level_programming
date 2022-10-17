@@ -9,7 +9,7 @@ class Rectangle:
     """
     number_of_instances = 0
     print_symbol = "#"
-    
+
     def __init__(self, width=0, height=0):
         """Initialize a new rectangle.
         Args:
@@ -71,7 +71,7 @@ class Rectangle:
         Method to compute the area of the rectangle
         """
         return (self.__width * self.__height)
-    
+
     def perimeter(self):
         """
         Method to compute the parameter of the rectangle
@@ -88,17 +88,16 @@ class Rectangle:
         Returns:
             rect: a rectangle generated from a user defined height and width
         """
-        rect = []
+        rect = ""
         if self.__height == 0 or self.__width == 0:
             return ("")
-        
+
         else:
             for self.length in range(self.__height):
-                [rect.append(str(self.print_symbol)) for self.breadth in range(self.__width)]
-                if self.length != self.__height - 1:
-                    rect.append("\n")
-            return("".join(rect))
-        
+                rect += (str(self.print_symbol) * self.__width) + "\n"
+
+            return ("".join(rect[:-1]))
+
     def __repr__(self):
         """
         A module to recreate the rectangle.
