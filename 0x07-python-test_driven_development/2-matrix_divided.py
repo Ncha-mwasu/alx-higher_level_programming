@@ -2,6 +2,8 @@
 """
 A matrix division module
 """
+
+
 def matrix_divided(matrix, div):
     """This function takes two inputs(a matrix and div(int/float))
     and divides the matrix by div.
@@ -9,7 +11,7 @@ def matrix_divided(matrix, div):
         matrix: a matrix of numbers(int/float) - 1st argument
     div: a number - 2nd argument
 
-    Return: 
+    Return:
         a new matrix with the results of the division of the old matrix
 
     Raises:
@@ -26,13 +28,13 @@ def matrix_divided(matrix, div):
     for item in matrix:
         if not item or not isinstance(item, list):
             raise TypeError(msg_size)
-      
+
         if len(matrix[0]) != len(item):
             raise TypeError("Each row of the matrix must have the same size")
-    
+
         for num in item:
             if type(num) not in [int, float]:
-            raise TypeError(msg_size)
+                raise TypeError(msg_size)
 
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
@@ -40,5 +42,4 @@ def matrix_divided(matrix, div):
     elif div == 0:
         raise ZeroDivisionError("division by zero")
     else:
-        return ([list(map(lambda x: round(x / div, 2), items))for items in matrix])
-
+        return ([list(map(lambda x: round(x / div, 2), i))for i in matrix])

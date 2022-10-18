@@ -5,13 +5,13 @@ A module full name computation module
 
 
 def say_my_name(first_name, last_name=""):
-    """This function computes one's full name using two strings  
+    """This function computes one's full name using two strings
     Args:
         first_name: first string
         last_name: second string
 
         Return:
-            full name: a string got from the concatenation of first and last name
+            full name: a string concatenation of first and last name
 
         Raises:
             TypeError: If first_name and/or last_name is/are not of string type

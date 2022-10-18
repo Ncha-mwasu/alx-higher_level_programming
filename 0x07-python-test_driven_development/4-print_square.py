@@ -2,11 +2,13 @@
 """
 A square printing module
 """
+
+
 def print_square(size):
-    """This function computes one's full name using two strings  
+    """This function computes one's full name using two strings
     Args:
         size: an integer
-  
+
     Raises:
         TypeError: If size is not of int type
         ValueError: If size is less than 0
