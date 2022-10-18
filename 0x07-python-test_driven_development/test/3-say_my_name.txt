@@ -1,0 +1,80 @@
+The ``3-say_my_name`` module
+============================
+
+Using ``say_my_name``
+---------------------
+
+Importing  module
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+passing strings
+    >>> say_my_name("John", "Smith")
+    My name is John Smith
+
+passing strings
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+passing a string
+    >>> say_my_name("Bob")
+    My name is Bob
+
+passing an empty list
+    >>> say_my_name("Nick", [])
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+passing an integer
+    >>> say_my_name("Nick", 123)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+passing a list
+    >>> say_my_name("Nick", [123])
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+passing a tuple
+    >>> say_my_name("Nick", (123))
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+passing an empty tuple
+    >>> say_my_name("Nick", ())
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+passing an empty set
+    >>> say_my_name("Nick", {})
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+passing an empty set
+    >>> say_my_name({}, "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+passing an empty tuple
+    >>> say_my_name((), "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+passing an int
+    >>> say_my_name(123, "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+passing a float
+    >>> say_my_name(123.4, "White")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string

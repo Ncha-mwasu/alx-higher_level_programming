@@ -1,0 +1,107 @@
+The ``4-print_square`` module
+============================
+
+Using ``print_square``
+---------------------
+
+Importing Module
+    >>> print_square = __import__('4-print_square').print_square
+
+Passing an integer
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+    >>> print_square(0)
+    
+    >>> print_square(5)  
+    #####
+    #####
+    #####
+    #####
+    #####
+
+passing a negative integer
+    >>> print_square(-1)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+passing an empty tuple
+    >>> print_square(()) 
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+passing a list
+    >>> print_square([123]) 
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+passing a float
+    >>> print_square(12.4)  
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+passing a negative float 
+    >>> print_square(-12.4) 
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+passing a negative int
+    >>> print_square(-12)   
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+passing a float
+    >>> print_square(0.9)   
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+passing a negative float
+    >>> print_square(-0.9) 
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+passing an empty set
+    >>> print_square({})   
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+passing a string
+    >>> print_square('0.9')   
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Passing None
+    >>> print_square(None)   
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+no arguments passed
+    >>> print_square()   
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
