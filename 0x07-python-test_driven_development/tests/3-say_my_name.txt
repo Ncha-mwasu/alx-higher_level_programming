@@ -17,7 +17,7 @@ passing strings
 
 passing a string
     >>> say_my_name("Bob")
-    My name is Bob
+    My name is Bob 
 
 passing an empty list
     >>> say_my_name("Nick", [])
