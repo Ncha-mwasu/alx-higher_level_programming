@@ -25,7 +25,7 @@ def matrix_divided(matrix, div):
     if not matrix or not isinstance(matrix, list):
         raise TypeError(msg_size)
 
-    if type(div) not in [int, float]:
+    if not isinstance(div, int) and not isinstance (div, float):
         raise TypeError("div must be a number")
 
     if div == 0:
@@ -39,7 +39,7 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
 
         for num in item:
-            if type(num) not in [int, float]:
+            if not isinstance(num, int) and not isinstance (num, float):
                 raise TypeError(msg_size)
 
     return ([list(map(lambda x: round(x / div, 2), i))for i in matrix])
