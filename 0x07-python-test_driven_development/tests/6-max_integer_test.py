@@ -48,13 +48,3 @@ class TestMaxInt(unittest.TestCase):
         result = max_integer([-1.5, 2, 3, -4.6])
         counter = max([-1.5, 2, 3, -4.6])
         self.assertEqual(result, counter)
-
-    def test_matrix_integer6(self):
-        result = max_integer([1])
-        counter max([1])
-        self.assertEqual(result, counter)
-
-    def test_matrix_integer6(self):
-        result = max_integer([])
-        counter max([])
-        self.assertEqual(result, counter)
