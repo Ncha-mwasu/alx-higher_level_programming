@@ -24,13 +24,12 @@ def matrix_divided(matrix, div):
 
     if not matrix or not isinstance(matrix, list):
         raise TypeError(msg_size)
-    
+
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
 
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
 
     for item in matrix:
         if not item or not isinstance(item, list):
