@@ -18,12 +18,19 @@ def matrix_divided(matrix, div):
         TypeError: if matrix is not of int/float type
                     and if the lengths of the nested matrices are not equal
                     if div is also not of int/float type
-    ZeroDivisionError: if div is 0
+        ZeroDivisionError: if div is 0
     """
     msg_size = "matrix must be a matrix (list of lists) of integers/floats"
 
     if not matrix or not isinstance(matrix, list):
         raise TypeError(msg_size)
+    
+    if type(div) not in [int, float]:
+        raise TypeError("div must be a number")
+
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
+
 
     for item in matrix:
         if not item or not isinstance(item, list):
@@ -36,10 +43,4 @@ def matrix_divided(matrix, div):
             if type(num) not in [int, float]:
                 raise TypeError(msg_size)
 
-    if type(div) not in [int, float]:
-        raise TypeError("div must be a number")
-
-    elif div == 0:
-        raise ZeroDivisionError("division by zero")
-    else:
-        return ([list(map(lambda x: round(x / div, 2), i))for i in matrix])
+    return ([list(map(lambda x: round(x / div, 2), i))for i in matrix])
