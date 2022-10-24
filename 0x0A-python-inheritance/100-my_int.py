@@ -9,7 +9,7 @@ class MyInt(int):
     """
     MyInt class to invert '==' and '!=' operators
     """
-    
+
     def __eq__(self, other):
         """
         method that inverts '==' by returning '!='
