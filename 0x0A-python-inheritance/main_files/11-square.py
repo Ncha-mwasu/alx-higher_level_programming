@@ -23,4 +23,4 @@ class Square(Rectangle):
         """
         The square class return value
         """
-        return "[Square] {0}/{0}".format(self.__size)
+        return ("[Square] " + str(self.__size) + "/" + str(self.__size))

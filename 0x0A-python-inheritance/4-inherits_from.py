@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+A function that checks for only inheritance.
+"""
+
 
 def inherits_from(obj, a_class):
     """
@@ -15,4 +19,4 @@ def inherits_from(obj, a_class):
         False: if not
     """
 
-    return issubclass(a_class.obj, a_class)
+    return type(obj) != a_class and isinstance(obj, a_class)
