@@ -33,4 +33,4 @@ class Rectangle(BaseGeometry):
         """
         Return result of the class
         """
-        return "[Rectangle] {} / {}".format(self.__width, self.__height)
+        return ("[Rectangle] " + str(self.__width) + "/" + str(self.__height))
