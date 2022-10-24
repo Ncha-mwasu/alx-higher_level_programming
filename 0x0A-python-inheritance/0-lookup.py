@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def lookup(obj):
     """
     method returning all properties and methods
