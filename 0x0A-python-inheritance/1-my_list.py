@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/in/python3
 """
 A class module to sort lists in ascending order
 """
