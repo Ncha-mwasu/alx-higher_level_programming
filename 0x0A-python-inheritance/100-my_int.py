@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 """
-A in class
+A user defined int class inheriting
+from the built-in int class
 """
 
 class MyInt(int):
     """
-    MyInt class inheriting from the int class
+    MyInt class to invert '==' and '!=' operators
     """
     
     def __eq__(self, other):

@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+"""
+Defining a square class by using(inheriting) the
+rectangle class
+"""
+
+
 Rectangle = __import__('9-rectangle').Rectangle
-"""
-    A class of name Square
-"""
 
 
 class Square(Rectangle):
