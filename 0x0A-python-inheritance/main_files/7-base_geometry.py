@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    A class of name BaseGeometry
+A class of name BaseGeometry
 """
 
 
