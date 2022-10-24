@@ -7,7 +7,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
-    A blueprint Rectangle class defined by its parent class 
+    A blueprint Rectangle class defined by its parent class
     Base geometry
     """
 

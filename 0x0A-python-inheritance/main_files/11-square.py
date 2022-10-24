@@ -7,7 +7,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """
-    A blueprint Rectangle class defined by its parent class 
+    A blueprint Rectangle class defined by its parent class
     Base geometry
     """
 
