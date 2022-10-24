@@ -17,4 +17,5 @@ class MyList(list):
         A class method that prints a list in sorted order
         """
         list_sorted = self.copy()
-        print(sorted(list_sorted))
+        list_sorted.sort()
+        print(list_sorted)
