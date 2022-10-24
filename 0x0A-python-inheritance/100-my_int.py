@@ -4,6 +4,7 @@ A user defined int class inheriting
 from the built-in int class
 """
 
+
 class MyInt(int):
     """
     MyInt class to invert '==' and '!=' operators
@@ -13,10 +14,10 @@ class MyInt(int):
         """
         method that inverts '==' by returning '!='
         """
-        return int.__ne__(self, other)
+        return self.real != other
 
     def __ne__(self, other):
         """
         function that invert '!=' by returning '=='
         """
-        return int.__eq__(self, other)
+        return self.real == other
