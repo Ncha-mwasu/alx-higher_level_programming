@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """
-    A class of name Rectangle
+Implementing the geometry class by
+defining a rectangle
 """
 
+
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """
