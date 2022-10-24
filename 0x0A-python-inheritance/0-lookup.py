@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def lookup(obj):
-    """Function returning all properties and methods
-        of the specified object, without the values
+    """
+    Function returning all properties and methods
+    of the specified object, without the values
 
     Args:
         Obj: The class' instance
@@ -10,4 +11,4 @@ def lookup(obj):
         The properties and methods of the specified object
     """
 
-    return dir(obj)
+    return (dir(obj))
