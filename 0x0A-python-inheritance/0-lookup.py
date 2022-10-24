@@ -8,7 +8,7 @@ def lookup(obj):
         Obj: The class' instance
 
     Returns:
-        The properties and methods of the specified object
+        List of properties and methods of the specified object
     """
 
     return (dir(obj))
