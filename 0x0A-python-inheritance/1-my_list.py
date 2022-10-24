@@ -1,8 +1,20 @@
 #!/bin/python3
 """
-A module that returns a list
+A class module to sort lists in ascending order
 """
 
 
-def lookup(obj):
-    print(dir(obj))
+class MyList(list):
+    """
+    A python class (blueprint) that prints a list in sorted order
+
+    Args:
+        list: a list of int.
+    """
+
+    def print_sorted(self):
+        """
+        A class method that prints a list in sorted order
+        """
+        list_sorted = self.copy()
+        print(sorted(list_sorted))
