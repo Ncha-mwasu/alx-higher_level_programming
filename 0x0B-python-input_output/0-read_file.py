@@ -1,13 +1,20 @@
 #!/usr/bin/python3
 """
-Function to write to a file
+Module containing a function to read a file
 """
 
 
 def read_file(filename=""):
     """
-    Writing to a file
+    Function to read a file
+
+    Args:
+        filename: the name of the file to be read.
+
+    Raise:
+        None
     """
 
     with open(filename, encoding='utf-8') as f:
-        f.read()
+        data = f.read()
+        print(data, end="")
