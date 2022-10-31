@@ -2,6 +2,7 @@
 Base class
 """
 
+
 class Base:
     """
     A class with a initialization module:
@@ -10,15 +11,15 @@ class Base:
      (by extension, same bugs)
     """
 
-
     __nb_objects = 0
 
     def __init__(self, id=None):
         """
-        initializing the class and id variable 
+        initializing the class and id variable
         """
+
         if id is not None:
-            self.id =  id
+            self.id = id
 
         else:
             Base.__nb_objects += 1
