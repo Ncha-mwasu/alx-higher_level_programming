@@ -1,75 +1,73 @@
-"""
-Square class
+#!/usr/bin/python3
+""" Module that contains class Square,
+inheritance of class Rectangle
 """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """
-    Square class
-    """
+    """ Class Rectangle """
+
     def __init__(self, size, x=0, y=0, id=None):
-        """
-        initializing the Square class
-        """
-        super().__init__(size, size, x=0, y=0, id=None)
+        """ Initializes instances """
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """
-        The rectangle class return statement
-        """
-        output0 = "[Square]"
-        output = "({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
-        return output0 + output
+        """ str special method """
+        str_square = "[Square] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_wh = "{}/{}".format(self.width, self.height)
+
+        return str_square + str_id + str_xy + str_wh
 
     @property
     def size(self):
-        """
-        Method to get the width of the square
-
-        Returns:
-            The width value of the square
-        """
+        """ Getter size """
         return self.width
 
     @size.setter
     def size(self, value):
-        """
-        Method to set the width of the square
+        """ Setter size """
+        self.width = value
+        self.height = value
 
-        Args:
-            value (int): a set width value.
-        """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-        elif value < 0:
-            raise ValueError("width must be >= 0")
-        else:
-            self.width = value
+    def __str__(self):
+        """ str special method """
+        str_rectangle = "[Square] "
+        str_id = "({}) ".format(self.id)
+        str_xy = "{}/{} - ".format(self.x, self.y)
+        str_size = "{}".format(self.size)
+
+        return str_rectangle + str_id + str_xy + str_size
 
     def update(self, *args, **kwargs):
-        """
-        Update method: updates the values of the instance variable
-        """
-        if args is not None and len(args) != 0:
-            list_attr = ["id", "size", "x", "y"]
-
-            for arg in range(len(args)):
-                setattr(self, list_attr[arg], args[arg])
+        """ update method """
+        if args is not None and len(args) is not 0:
+            list_atr = ['id', 'size', 'x', 'y']
+            for i in range(len(args)):
+                if list_atr[i] == 'size':
+                    setattr(self, 'width', args[i])
+                    setattr(self, 'height', args[i])
+                else:
+                    setattr(self, list_atr[i], args[i])
         else:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if key == 'size':
+                    setattr(self, 'width', value)
+                    setattr(self, 'height', value)
+                else:
+                    setattr(self, key, value)
 
     def to_dictionary(self):
-        """
-        Method to pass instance variables as a dictionary
-        """
-        list_attr = ["id", "size", "x", "y"]
+        """ Returns a dictionary with attributes """
+        list_atr = ['id', 'size', 'x', 'y']
+        dict_res = {}
 
-        sqr_dict = {}
-        for key in list_attr:
-            if key == "size":
-                sqr_dict[key] = getattr(self, "width")
+        for key in list_atr:
+            if key == 'size':
+                dict_res[key] = getattr(self, 'width')
             else:
-                sqr_dict[key] = getattr(self, key)
-        return sqr_dict
+                dict_res[key] = getattr(self, key)
+
+        return dict_res
